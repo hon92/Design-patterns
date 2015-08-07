@@ -3,16 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package patterns.decorator;
+package patterns.chainofresponsibility;
 
 /**
  *
  * @author Honza
  */
-public class DecoratorDemo {
+public class ChainOfResponsibilityDemo {
     public void start()
     {
-        Drink d = new SugarDecorator(new CoffeeDrink());
-        System.out.println(d.getCost() + " " + d.getName());
+        Chain chain = new TestChain();
+        Chain next = new EverythingChain();
+        chain.setNextChain(next);
+        
+        chain.action("tesqter");
     }
 }

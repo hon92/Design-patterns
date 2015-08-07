@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package patterns.decorator;
+package patterns.nullobject;
 
 /**
  *
  * @author Honza
  */
-public class DecoratorDemo {
-    public void start()
-    {
-        Drink d = new SugarDecorator(new CoffeeDrink());
-        System.out.println(d.getCost() + " " + d.getName());
+public class BasicEnemy extends Entity{
+
+    @Override
+    public void attack() {
+        System.out.println("Basic enemy attacking");
     }
+    
 }

@@ -3,16 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package patterns.decorator;
+package patterns.prototype;
 
 /**
  *
  * @author Honza
  */
-public class DecoratorDemo {
+public class PrototypeDemo {
     public void start()
     {
-        Drink d = new SugarDecorator(new CoffeeDrink());
-        System.out.println(d.getCost() + " " + d.getName());
+        GameObject go = new Enemy("enemy1");
+        System.out.println(go);
+        
+        GameObject go2 = (GameObject) go.clone();
+        System.out.println(go2);
+        
     }
 }

@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package patterns.decorator;
+package patterns.bridge;
 
 /**
  *
  * @author Honza
  */
-public class DecoratorDemo {
+public class BridgeDemo {
     public void start()
     {
-        Drink d = new SugarDecorator(new CoffeeDrink());
-        System.out.println(d.getCost() + " " + d.getName());
+        Part part = new CPU(2500, new IntelCpu());
+        part.initialization();
+        System.out.println(part.getInfo());
     }
 }

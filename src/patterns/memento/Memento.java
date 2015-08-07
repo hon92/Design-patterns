@@ -3,16 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package patterns.decorator;
+package patterns.memento;
 
 /**
  *
  * @author Honza
  */
-public class DecoratorDemo {
-    public void start()
-    {
-        Drink d = new SugarDecorator(new CoffeeDrink());
-        System.out.println(d.getCost() + " " + d.getName());
+public class Memento {
+    private String text;
+
+    public Memento(String text) {
+        this.text = text;
     }
+
+    public String getText() {
+        return text;
+    }
+    
+    
 }

@@ -8,11 +8,20 @@ package main;
 import patterns.decorator.DecoratorDemo;
 import patterns.abstractfactory.AbstractFactoryDemo;
 import patterns.adapter.AdapterDemo;
+import patterns.bridge.BridgeDemo;
+import patterns.builder.BuilderDemo;
+import patterns.chainofresponsibility.ChainOfResponsibilityDemo;
 import patterns.command.CommandDemo;
 import patterns.composite.CompositeDemo;
 import patterns.fasade.FasadeDemo;
+import patterns.flyweight.FlyweightDemo;
+import patterns.interpreter.InterpreterDemo;
 import patterns.iterator.IteratorDemo;
+import patterns.mediator.MediatorDemo;
+import patterns.memento.MementoDemo;
+import patterns.nullobject.NullObjectDemo;
 import patterns.observer.ObserverDemo;
+import patterns.prototype.PrototypeDemo;
 import patterns.proxy.ProxyDemo;
 import patterns.state.StateDemo;
 import patterns.strategy.BasicAlgorithm;
@@ -65,5 +74,33 @@ public class Main {
         
         ProxyDemo proxyDemo = new ProxyDemo();
         proxyDemo.start();
+        
+        BridgeDemo bridgeDemo = new BridgeDemo();
+        bridgeDemo.start();
+        
+        BuilderDemo builderDemo = new BuilderDemo();
+        builderDemo.start();
+                
+        ChainOfResponsibilityDemo chainOfResponsibilityDemo = new ChainOfResponsibilityDemo();
+        chainOfResponsibilityDemo.start();
+        
+        FlyweightDemo flyweightDemo = new FlyweightDemo();
+        flyweightDemo.start();
+        
+        InterpreterDemo interpreterDemo = new InterpreterDemo();
+        interpreterDemo.start();
+        
+        MediatorDemo mediatorDemo = new MediatorDemo();
+        mediatorDemo.start();
+        
+        MementoDemo mementoDemo = new MementoDemo();
+        mementoDemo.start();
+        
+        NullObjectDemo nullObjectDemo = new NullObjectDemo();
+        nullObjectDemo.start();
+        
+        PrototypeDemo prototypeDemo = new PrototypeDemo();
+        prototypeDemo.start();
+                
     }
 }

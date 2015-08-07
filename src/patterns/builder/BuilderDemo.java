@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package patterns.decorator;
+package patterns.builder;
 
 /**
  *
  * @author Honza
  */
-public class DecoratorDemo {
+public class BuilderDemo {
     public void start()
     {
-        Drink d = new SugarDecorator(new CoffeeDrink());
-        System.out.println(d.getCost() + " " + d.getName());
+        Car car = new Car.CarBuilder("BMW", 400).setMaxSpeed(350).build();
+        car.info();
     }
 }

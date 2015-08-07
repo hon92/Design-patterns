@@ -3,19 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package patterns.visitor;
+package patterns.mediator;
 
 /**
  *
  * @author Honza
  */
-public class VisitorDemo{
+public class Request {
+
+    private Server server;
+    private String url;
+    
+    public Request(Server server, String url) {
+        this.server = server;
+        this.url = url;
+    }
     
     public void start()
     {
-        IDeviceVisitor deviceVisitor = new DeviceVisitor();
-        IDevice device = new Computer();
-        device.accept(deviceVisitor);
-        
+        server.processRequest(url);
     }
+    
 }

@@ -3,16 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package patterns.decorator;
+package patterns.mediator;
 
 /**
  *
  * @author Honza
  */
-public class DecoratorDemo {
+public class MediatorDemo {
     public void start()
     {
-        Drink d = new SugarDecorator(new CoffeeDrink());
-        System.out.println(d.getCost() + " " + d.getName());
+        Server server = new Server();
+        Request req1 = new Request(server, "seznam.cz");
+        Response res = new Response("welcome", server);
+        
+        req1.start();
+        res.start();
     }
 }
